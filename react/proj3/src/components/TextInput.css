@@ -1,0 +1,20 @@
+.TextInput {
+    size: 200%;
+    min-width: 222px;
+}
+
+.TextInput__Label {
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    margin: 4px;
+}
+
+.TextInput__Field {
+    width: 222px;
+    height: 40px;
+    border: 0.82px solid #D1D5DB;
+    border-radius: 4.91px;
+    padding-left: 15px;
+    font-size: 16px;
+}

@@ -10,7 +10,7 @@ const page = (
       <Header/>
       <Main/>
       {/* <Footer/> */}
-    </div>
+  </div>
 );
 
 console.log(page)
