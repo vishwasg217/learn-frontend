@@ -1,7 +1,23 @@
 import TextInput from './TextInput.js'
 import './Form.css'
+import memesData from '../data/memesData.js'
 
-function Form() {
+function getMemeImage() {
+    const memesArray = memesData.data.memes
+    const randomNumber = Math.floor(Math.random() *  memesArray.length)
+    const url = memesArray[randomNumber].url
+    
+    return url
+}
+
+function Form({setImgUrl}) {
+
+    function handleClick() {
+        const imgUrl = getMemeImage()
+        setImgUrl(imgUrl)
+    }
+
+
     return (
         <div className='Form'>
             <div className='Inputs'>
@@ -16,7 +32,7 @@ function Form() {
                     placeholder='And take my money'
                 />
             </div>
-            <input type='submit' className='Form__Button' value='Get a new meme image  🖼'/>
+            <input type='submit' className='Form__Button' onClick={handleClick} value='Get a new meme image  🖼'/>
         </div>
     )
 }
