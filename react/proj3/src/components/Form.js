@@ -10,11 +10,14 @@ function getMemeImage() {
     return url
 }
 
-function Form({setImgUrl}) {
+function Form({setImgUrl, topText, setTopText, bottomText, setBottomText}) {
+
 
     function handleClick() {
         const imgUrl = getMemeImage()
         setImgUrl(imgUrl)
+        setTopText(topText)
+        setBottomText(bottomText)
     }
 
 
@@ -24,12 +27,14 @@ function Form({setImgUrl}) {
                 <TextInput 
                     id='toptext' 
                     label='Top text'
-                    placeholder='Shut up'
+                    value={topText}
+                    onChange={(e) => setTopText(e.target.value)}
                 />
                 <TextInput
                     id='bottomtext'
                     label='Bottom text'
-                    placeholder='And take my money'
+                    value={bottomText}
+                    onChange={(e) => setBottomText(e.target.value)}
                 />
             </div>
             <input type='submit' className='Form__Button' onClick={handleClick} value='Get a new meme image  🖼'/>
