@@ -1,8 +1,9 @@
 
 
-function Main() {
+function Main(props) {
+
     return (
-        <main>
+        <main className={props.darkMode ? "" : "light"}>
             <h1 className="main__title">Fun facts about React</h1>
             <ul className="main__list">
                 <li>React is a JavaScript library for building user interfaces</li>

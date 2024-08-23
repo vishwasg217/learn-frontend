@@ -1,9 +1,9 @@
 import ReactIcon from '../images/react-icon.png';
 
-function Header() {
+function Header(props) {
     return (
       <header className="Header">
-        <nav>
+        <nav className={props.darkMode ? "" : "light"}>
           <img src={ReactIcon} alt="react icon" className='react-logo-img'/>
           <h1 className='nav__logo-text'>ReactFacts</h1>
           <h3 className='nav__title'>React Course - Project 1</h3>
